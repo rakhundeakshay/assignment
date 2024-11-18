@@ -1,0 +1,350 @@
+/* Dashboard Styles */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+}
+.dashboard-wrapper {
+  border: 1px solid rgb(163, 161, 161, 0.5);
+  padding: 20px;
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 130px;
+  background-color: #782805;
+  padding: 20px;
+  padding-left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #e9ce97;
+  padding-left: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav li {
+  padding: 12px 6px;
+  cursor: pointer;
+}
+
+.sidebar nav li:hover {
+  background: linear-gradient(
+    to right,
+    rgb(235, 205, 153, 0.5) 0%,
+    rgba(235, 205, 153, 0) 15%
+  );
+}
+
+.sidebar nav li.active {
+  background: linear-gradient(
+    to right,
+    rgb(235, 205, 153, 0.5) 0%,
+    rgba(235, 205, 153, 0) 15%
+  );
+  font-weight: 500;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 24px;
+}
+.profile-wrapper {
+  position: absolute;
+  bottom: 0;
+  padding-left: 20px;
+}
+.profile-block {
+  display: flex;
+  gap: 6px;
+  align-items: start;
+}
+.profile-block > img {
+  border-radius: 50%;
+}
+.profile-block > div {
+  font-size: 10px;
+}
+.list{
+  margin: 12px 0;
+}
+.profile-block > div > div {
+  color: rgb(153, 145, 145);
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 24px;
+}
+
+.filter-select {
+  padding: 8px 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 150px;
+}
+.search {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 0;
+  gap: 8px;
+}
+.search > input {
+  width: 100%;
+  padding: 4px 4px;
+  box-shadow: none;
+  border: 1px solid rgb(125, 123, 123, 0.5);
+}
+.search > button {
+  font-size: 10px;
+  padding: 8px 4px;
+  background-color: #782805;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+}
+.apply-btn {
+  padding: 8px 30px;
+  background-color: #99abe7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Table Styles */
+.table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  height: 400px;
+  scrollbar-width: thin;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  font-weight: 500;
+  color: #666;
+}
+
+/* Campaign Info */
+.campaign-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.item-logo > img {
+  border: 1px solid rgb(130, 127, 127, 0.5);
+  padding: 6px 2px;
+  border-radius: 4px;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.campaign-logo {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.campaign-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.campaign-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Platform Icons */
+.platforms {
+  display: flex;
+  gap: 8px;
+}
+
+.platform-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.platform-icon.android {
+  background-color: #a4c639;
+  color: white;
+}
+
+.platform-icon.apple {
+  background-color: #000;
+  color: white;
+}
+
+.platform-icon.chrome {
+  background-color: #4285f4;
+  color: white;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 4px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.metric-number {
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+}
+.down {
+  color: red;
+}
+.up {
+  color: green;
+}
+.status-badge.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.inactive {
+  background-color: #b9b9b9;
+  color: #f0f0f0;
+}
+
+.status-badge.paused {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+/* Metric Values */
+.metric {
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filter-select {
+    min-width: 140px;
+  }
+  .status-badge {
+    padding: 4px 3px;
+    border-radius: 4px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 975px) {
+  .search > button {
+    padding: 2px 4px;
+  }
+}
+@media (max-width: 779px) {
+  .search > button {
+    padding: 2px 4px;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .campaign-desc {
+    display: none;
+  }
+
+  th,
+  td {
+    padding: 12px 8px;
+  }
+  .search > button {
+    padding: 2px 4px;
+  }
+  .profile-wrapper {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-select,
+  .apply-btn {
+    width: 100%;
+  }
+
+  .campaign-logo {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+  .search > button {
+    padding: 2px 4px;
+  }
+}
