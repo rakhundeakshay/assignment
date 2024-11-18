@@ -11,7 +11,7 @@
 }
 /* Sidebar Styles */
 .sidebar {
-  width: 130px;
+  width: 190px;
   background-color: #782805;
   padding: 20px;
   padding-left: 0;
@@ -58,7 +58,7 @@
 /* Main Content Styles */
 .main-content {
   flex: 1;
-  padding: 24px;
+  padding: 10px;
 }
 .profile-wrapper {
   position: absolute;
