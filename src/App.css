@@ -76,7 +76,7 @@
 .profile-block > div {
   font-size: 10px;
 }
-.list{
+.list {
   margin: 12px 0;
 }
 .profile-block > div > div {
@@ -268,25 +268,25 @@ th {
 
 /* Responsive Design */
 @media screen and (min-width: 1281px) {
-  .dashboard{
+  .dashboard {
     font-size: 16px;
   }
-  .search>input{
+  .search > input {
     padding: 8px;
   }
-  .search>button{
+  .search > button {
     font-size: 12px;
     padding: 11px 4px;
     width: 125px;
   }
-  .filter-select{
+  .filter-select {
     min-width: 250px;
     padding: 8px 4px;
   }
-  .apply-btn{
+  .apply-btn {
     padding: 8px 42px;
   }
-  .table-container{
+  .table-container {
     height: 670px;
   }
 }
@@ -357,6 +357,14 @@ th {
   .filters {
     flex-direction: column;
   }
+  .search {
+    display: block;
+  }
+  .search > button {
+    padding: 10px 4px;
+    width: 100%;
+    margin-top: 8px;
+  }
 
   .filter-select,
   .apply-btn {
@@ -367,8 +375,5 @@ th {
     width: 32px;
     height: 32px;
     font-size: 20px;
-  }
-  .search > button {
-    padding: 2px 4px;
   }
 }
