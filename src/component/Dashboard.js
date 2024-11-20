@@ -3,6 +3,7 @@ const downArrow = require("../image/down.png");
 const apple = require("../image/apple.png");
 const windos = require("../image/windos.png");
 const store = require("../image/store.png");
+const search = require("../image/Vector.png");
 
 const Dashboard = ({ data }) => {
   const PlatformIcon = ({ platform }) => {
@@ -10,19 +11,19 @@ const Dashboard = ({ data }) => {
       case "android":
         return (
           <span>
-            <img src={store} width={"22px"} height={"22px"} />
+            <img src={store} width={"38px"} height={"38px"} />
           </span>
         );
       case "apple":
         return (
           <span>
-            <img src={apple} width={"22px"} height={"22px"} />
+            <img src={apple} width={"38px"} height={"38px"} />
           </span>
         );
       case "chrome":
         return (
           <span>
-            <img src={windos} width={"22px"} height={"22px"} />
+            <img src={windos} width={"38px"} height={"38px"} />
           </span>
         );
       default:
@@ -34,9 +35,12 @@ const Dashboard = ({ data }) => {
       <h1>Dashboard</h1>
       <div className="dashboard-wrapper">
         <div>
-          <div>Search for Saved Campaigns</div>
+          <div className="search-heading">Search for Saved Campaigns</div>
           <div className="search">
-            <input type="search" placeholder="Search" />
+            <div>
+              <img src={search} width={"14px"} height={"14px"} />
+              <input type="search" placeholder="Search" />
+            </div>
             <button>Create Campaign</button>
           </div>
         </div>
@@ -78,10 +82,10 @@ const Dashboard = ({ data }) => {
               {data.map((item, index) => (
                 <tr key={item.id}>
                   <td className="item-info">
-                    <span className="item-logo">
+                    <div className="item-logo">
                       <img src={item.logo} width={"35px"} height={"30px"} />
-                    </span>
-                    <div>
+                    </div>
+                    <div className="item-wrapper">
                       <div className="item-name">{item.name}</div>
                       <div className="item-desc">{item.description}</div>
                     </div>
@@ -94,18 +98,17 @@ const Dashboard = ({ data }) => {
                     </div>
                   </td>
                   <td>
-                    <span
+                    <div
                       className={`status-badge ${item.status.toLowerCase()}`}
                     >
                       {item.count} {item.status}
-                    </span>
+                    </div>
                   </td>
                   <td className="metric">
                     <div>{item.totalClicks}</div>
                     <div
-                      className={`metric-number ${
-                        item.clickStatus == "up" ? "up" : "down"
-                      }`}
+                      className={`metric-number ${item.clickStatus == "up" ? "up" : "down"
+                        }`}
                     >
                       <span>{item.clickCount}</span>
                       <img
@@ -118,9 +121,8 @@ const Dashboard = ({ data }) => {
                   <td className="metric">
                     <div>{item.totalInstalls}</div>
                     <div
-                      className={`metric-number ${
-                        item.clickStatus == "up" ? "up" : "down"
-                      }`}
+                      className={`metric-number ${item.clickStatus == "up" ? "up" : "down"
+                        }`}
                     >
                       <span>{item.installsCount}</span>
                       <img
@@ -133,9 +135,8 @@ const Dashboard = ({ data }) => {
                   <td className="metric">
                     <div>{item.totalEvents}</div>
                     <div
-                      className={`metric-number ${
-                        item.clickStatus == "up" ? "up" : "down"
-                      }`}
+                      className={`metric-number ${item.clickStatus == "up" ? "up" : "down"
+                        }`}
                     >
                       <span>{item.eventCount}</span>
                       <img
