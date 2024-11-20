@@ -42,7 +42,7 @@ const SideMenu = () => {
     <div className="sidebar">
       <div className="logo">
         <img src={logo} width={"47px"} height={"46px"} /> 
-        <div>JUUUNO</div>
+        <div> JUUUNO</div>
       </div>
       <nav>
         <ul>
